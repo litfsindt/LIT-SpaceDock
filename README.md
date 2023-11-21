@@ -29,7 +29,7 @@ No external libraries (e.g., NumPy, SciPy, ...) are required.
 ## Usage
 
 ``` bash
-$ python3.9 SpaceDock_launcher.py -pbb docked_BBs/ -o DRD3 -r "1 10"
+$ python3.9 SpaceDock_launcher.py -pbb docked_BBs_DRD3/ -o DRD3 -r "1 10"
 ```
 This command will initiate SpaceDock using the path containing building block poses (-pbb docked_BBs/) and using reactions 1 and 10 (-r "1 10").
 
@@ -53,7 +53,7 @@ For more option, use the SpaceDock_launcher.py --help command
 
 #### Filtering based on optional IChem IFP similarity
 ``` bash
-$ python3.9 SpaceDock_launcher.py -pbb docked_BBs/ -o DRD3 -r "1 10" --ichem IChem/ichem_DRD3.conf
+$ python3.9 SpaceDock_launcher.py -pbb docked_BBs_DRD3/ -o DRD3 -r "1 10" --ichem IChem/ichem_DRD3.conf
 ```
 This command allows the filtering of combinations based on IChem interactions fingerprint similarity. 
 A reference ligand is required, and the ichem.conf file (examples provided in the IChem/ folder) must be filled out.
