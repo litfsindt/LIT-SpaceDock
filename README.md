@@ -30,7 +30,7 @@ No external libraries (e.g., NumPy, SciPy, ...) are required.
 ``` bash
 $ python3.9 SpaceDock_launcher.py -pbb docked_BBs/ -o DRD3 -r "1 10"
 ```
-Path containing building blocks docking poses (-pbb : docked_BBs/) and reactions 1 and 10 selected.
+This command will initiate SpaceDock using the path containing building block poses (-pbb: docked_BBs/) and using reactions 1 and 10 (-r "1 10").
 Outputs :
 - DRD3_1.mol2
 - DRD3_1.tsv
