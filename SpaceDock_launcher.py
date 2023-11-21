@@ -35,11 +35,13 @@ def select_reaction(args_):
 
 	selected_reactions = []
 
-	if args_ == "all":
+	if len(args_) == 1 and args_[0] == "all":
 		return ["Amide", "Sulfonamide", "Benzoxazole"]
 	else:
-		args_rnx = args_.split(" ")
-		for arg_rnx in args_rnx:
+		for arg_rnx in args_:
+			if arg_rnx == "all":
+				print("Bad arguments in -r or --reaction. 'all' is present but some reactions are choosen.")
+				sys.exit(2)
 			if arg_rnx == "1":
 				selected_reactions.append("Amide")
 			if arg_rnx == "10":
@@ -135,14 +137,16 @@ if __name__ == "__main__":
             help='Packet id. Default 1')
 	parser.add_argument('-np','--npacket', type=int, required=False, default=1,
             help='Packet number. Default 1')
-	parser.add_argument('-r', '--reaction', type=str, required=True,
-            help='Reaction selection. all : every implented reactions. 1 : Amide, 10 : Sulfonamide, 27 : Benzoxazole. Use "" to select multiple reaction.')
+	parser.add_argument('-r', '--reaction', type=str, required=True, choices=["all", "1", "10", "27"], nargs="+",
+            help='Reaction selection. all : every implented reactions. 1 : Amide, 10 : Sulfonamide, 27 : Benzoxazole.')
 
 	### --- IChem --- ###
 	parser.add_argument('--ichem', type=str, required=False,
             help='enable IChem IFP filtering. \n ichem.conf is needed')
 
 	args = parser.parse_args()
+
+	print(args.reaction)
 
 	selected_reactions = select_reaction(args.reaction)
 	print("Selected reactions : ", selected_reactions, "\n")
@@ -190,11 +194,19 @@ if __name__ == "__main__":
 	if args.listbbposes != None and args.pathbbposes == None:
 		with open(args.bbposes, 'r') as file_poses_hdl:
 			list_path_docking_poses = file_poses_hdl.read().split("\n")
+		if len(list_path_docking_poses) == 0:
+			print("No docking poses founded in", args.bbposes)
+			sys.exit(2)
 	elif args.listbbposes == None and args.pathbbposes != None:
 		list_path_docking_poses = search_path_docking_poses(args.pathbbposes)
+		if len(list_path_docking_poses) == 0:
+			print("No docking poses founded in", args.pathbbposes)
+			sys.exit(2)
 	else:
 		print("Wrong arguments, list or a path for building block docking poses")
 		sys.exit(2)
+
+
 
 	start, end = calculate_packet(args.idpacket, args.npacket, len(list_path_docking_poses))
 
