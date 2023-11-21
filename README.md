@@ -1,4 +1,4 @@
-<h1 align="center">SpaceDock</h1>  
+<h1 align="center">LIT-SpaceDock</h1>  
 
 [![Generic badge](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://shields.io/)  
 
@@ -11,7 +11,7 @@
 ## Requirements
 1. /!\ Python 3.9+
 2. A Linux operating system
-3. GOLD (https://www.ccdc.cam.ac.uk/solutions/software/gold/) docking poses of building block provided by Enamine
+3. GOLD (https://www.ccdc.cam.ac.uk/solutions/software/gold/) docking poses of Enamine building blocks
 
 ## Installation
 SpaceDock package :
