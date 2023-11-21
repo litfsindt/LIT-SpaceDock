@@ -31,9 +31,10 @@ $ python3.9 SpaceDock_launcher.py -pbb docked_BBs/ -o DRD3 -r "1 10"
 Outputs :
 - DRD3.mol2
 - DRD3.tsv
+  
 For more option, use the SpaceDock_launcher.py --help command
 
-##### Contacts
+## Contacts
 François Sindt: f.sindt'[at]'unistra.fr  
 Didier Rognan, PhD: rognan'[at]'unistra.fr
 
