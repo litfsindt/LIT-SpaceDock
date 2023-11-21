@@ -55,7 +55,8 @@ For more option, use the SpaceDock_launcher.py --help command
 ``` bash
 $ python3.9 SpaceDock_launcher.py -pbb docked_BBs/ -o DRD3 -r "1 10" --ichem IChem/ichem_DRD3.conf
 ```
-This command allows to filtered out combinations by interactions fingerprint similarity if a reference ligand in the structure is available and you own the IChem software.
+This command allows the filtering of combinations based on IChem interactions fingerprint similarity. 
+A reference ligand is required, and the ichem.conf file (examples provided in the IChem/ folder) must be filled out.
 
 
 
