@@ -385,8 +385,7 @@ class Synthesis:
 					...
 
 			IChem can be activated to filter out combination by IFPs similarity
-			ligand_ and protein_ parameter have to be filled
-			ichem.conf has to be filled too
+			ichem.conf has to be filled
 
 			Parameters
 			----------
@@ -404,12 +403,12 @@ class Synthesis:
 
 		dico_merged_mol2 = {} # This dictionary will contains SpaceDock poses (Two merged building block)
 
+		reaction = Amide() # Setting the rules for Amide
+
 		for amine in amines_:
 			for carboxylic_acid in carboxylic_acids_:
+
 				try:
-
-					reaction = Amide() # Setting the rules for Amide
-
 					### --- 1st filter centre of mass --- ###
 					distance_between_center_mass = math.dist(amine.coord_center_of_mass, carboxylic_acid.coord_center_of_mass)
 					if reaction.distance_between_center_mass_down <= distance_between_center_mass <= reaction.distance_between_center_mass_up:
@@ -545,6 +544,9 @@ class Synthesis:
 				if ...
 					...
 
+			IChem can be activated to filter out combination by IFPs similarity
+			ichem.conf has to be filled
+
 			Parameters
 			----------
 			amines_ : list
@@ -553,17 +555,19 @@ class Synthesis:
 				list of building block sulfonyl chloride docking poses (object : Reactant::SulfonylChloride)
 			name_output_ : str
 				.tsv and .mol2 output name
-
+			ichem_ : tuple 
+				By default None is any ichem.conf file is given as paramter.
+				tuple containing (path_ichem, thresold_FULL, thresold_POLAR, ligand and protein as mol2)
 		"""
 
 		dico_merged_mol2 = {}
+
+		reaction = Sulfonamide() # Setting the rules for Sulfonamide
 
 		for amine in amines_:
 			for sulfonyl_chloride in sulfonyl_chlorides_:
 
 				try:
-					reaction = Sulfonamide() # Setting the rules for Sulfonamide
-
 					### --- 1st filter centre of mass --- ###
 					distance_between_center_mass = math.dist(amine.coord_center_of_mass, sulfonyl_chloride.coord_center_of_mass)
 					if reaction.distance_between_center_mass_down <= distance_between_center_mass <= reaction.distance_between_center_mass_up:
@@ -663,6 +667,9 @@ class Synthesis:
 				if ...
 					...
 
+			IChem can be activated to filter out combination by IFPs similarity
+			ichem.conf has to be filled
+
 			Parameters
 			----------
 			aminophenols_ : list
@@ -671,17 +678,20 @@ class Synthesis:
 				list of building block benzaldehyde docking poses (object : Reactant::Benzaldehyde)
 			name_output_ : str
 				.tsv and .mol2 output name
+			ichem_ : tuple 
+				By default None is any ichem.conf file is given as paramter.
+				tuple containing (path_ichem, thresold_FULL, thresold_POLAR, ligand and protein as mol2)
 
 		"""
 
 		dico_merged_mol2 = {}
 
+		reaction = Benzoxazole() # Setting the rules for Benzoxazole
+
 		for aminophenol in aminophenols_:
 			for benzaldehyde in benzaldehydes_:
 
 				try:
-					reaction = Benzoxazole() # Setting the rules for Benzoxazole
-
 					### --- 1st filter centre of mass --- ###
 					distance_between_center_mass = math.dist(aminophenol.coord_center_of_mass, benzaldehyde.coord_center_of_mass)
 					if reaction.distance_between_center_mass_down <= distance_between_center_mass <= reaction.distance_between_center_mass_up:
