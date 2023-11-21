@@ -146,8 +146,6 @@ if __name__ == "__main__":
 
 	args = parser.parse_args()
 
-	print(args.reaction)
-
 	selected_reactions = select_reaction(args.reaction)
 	print("Selected reactions : ", selected_reactions, "\n")
 
