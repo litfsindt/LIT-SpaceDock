@@ -533,7 +533,7 @@ class Synthesis:
 		else:
 			Output.write_output(dico_merged_mol2, name_output_, "1")
 
-	def sulfonamide(amines_, sulfonyl_chlorides_, name_output_):
+	def sulfonamide(amines_, sulfonyl_chlorides_, name_output_, ichem_conf_):
 
 		"""Sulfonamide workflow : cmass -> connectable atoms -> clashes
 
@@ -651,7 +651,7 @@ class Synthesis:
 		else:
 			Output.write_output(dico_merged_mol2, name_output_, "10")
 
-	def benzoxazole(aminophenols_, benzaldehydes_, name_output_):
+	def benzoxazole(aminophenols_, benzaldehydes_, name_output_, ichem_conf_):
 
 		"""Benzoxazole workflow : cmass -> connectable atoms -> angles oxazole cycle -> clashes
 
@@ -729,7 +729,7 @@ class Synthesis:
 									name_pose_benzaldehyde, num_pose_benzaldehyde = Output.name_and_num_pose_from_path(benzaldehyde.path)
 
 									name_merged_ = '{}_{}_{}_{}_27'.format(aminophenol.name, benzaldehyde.name, num_pose_aminophenol, num_pose_benzaldehyde)
-									tsv_output = [name_pose_aminophenol, num_pose_aminophenol]
+									tsv_output = [name_pose_aminophenol, name_pose_benzaldehyde]
 
 									### --- mol2 merging is launched --- ###
 
@@ -744,13 +744,13 @@ class Synthesis:
 
 				if ichem_conf_ != None:
 					dico_merged_mol2_IFP_filtered = Topological.IFP(dico_merged_mol2, ichem_conf_)
-					Output.write_output(dico_merged_mol2_IFP_filtered, name_output_, "10")
+					Output.write_output(dico_merged_mol2_IFP_filtered, name_output_, "27")
 				else:
-					Output.write_output(dico_merged_mol2, name_output_, "10")
+					Output.write_output(dico_merged_mol2, name_output_, "27")
 				dico_merged_mol2 = {}
 
 		if ichem_conf_ != None:
 			dico_merged_mol2_IFP_filtered = Topological.IFP(dico_merged_mol2, ichem_conf_)
-			Output.write_output(dico_merged_mol2_IFP_filtered, name_output_, "10")
+			Output.write_output(dico_merged_mol2_IFP_filtered, name_output_, "27")
 		else:
-			Output.write_output(dico_merged_mol2, name_output_, "10")
+			Output.write_output(dico_merged_mol2, name_output_, "27")

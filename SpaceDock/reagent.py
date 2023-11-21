@@ -7,7 +7,6 @@ mol2reader.py and reaction.py
 
 """
 
-
 import mol2parser as m2r
 from reaction import Topological
 
@@ -143,7 +142,7 @@ class Loader:
 								dico_list_poses["Benzoxazole"][1].append(Benzaldehyde(name, chemotype, reaction, tag_ids, path, score, mol2))
 
 				except:
-					print("Issue with", name, "check tag IDs or structure")
+					print("Issue with", name, "not in tag IDs or bad structure")
 					pass
 
 			compteur_passed += 1
