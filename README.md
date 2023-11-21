@@ -51,7 +51,7 @@ It produces two different outputs for each selected reaction :
 
 For more option, use the SpaceDock_launcher.py --help command
 
-#### Optional IChem IFP similarity filtering
+#### Filtering based on optional IChem IFP similarity
 ``` bash
 $ python3.9 SpaceDock_launcher.py -pbb docked_BBs/ -o DRD3 -r "1 10" --ichem IChem/ichem_DRD3.conf
 ```
