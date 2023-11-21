@@ -7,12 +7,13 @@
 </p>
 
 ## Introduction
-SpaceDock is a simple and fast computational approach to screen virtualy "ultra-large" synthetic accessible chemical library. It first requires docking commercially available chemical reagents in the target of interest, in order to assemble them in the target's cavity 3D coordinates according to standard organic chemistry reactions to propose multibillion compound libraries in one or two synthetic steps.
+SpaceDock is a straightforward and rapid computational approach designed to screen virtually 'ultra-large' synthetically accessible chemical libraries. It first requires docking commercially available chemical reagents into the target of interest, assembling them in the target's cavity based on standard organic chemistry reactions, thereby proposing multibillion compound libraries achievable in one or two synthetic steps.
 
 ## Requirements
 1. /!\ Python 3.9+
 2. A Linux operating system
-3. GOLD (https://www.ccdc.cam.ac.uk/solutions/software/gold/) docking poses of Enamine building blocks
+3. Enamine building blocks docking poses docked with GOLD*
+*https://www.ccdc.cam.ac.uk/solutions/software/gold/
 
 ## Installation
 SpaceDock package :
@@ -21,8 +22,8 @@ SpaceDock package :
 - Mol2 parser (mol2parser.py) in SpaceDock/
 - tag_table_REAL.tsv in datas/ to annote Enamine REAL Space building blocks
 
-Downloading the folder and owning Python3.9 is sufficient to run the scripts. </br>
-There is no needed external libraries (e.g. NumPy, SciPy, ...).
+Downloading the folder and having Python 3.9 installed is sufficient to run the scripts. 
+No external libraries (e.g., NumPy, SciPy, ...) are required.
 
 ## Usage
 
@@ -36,7 +37,8 @@ Outputs :
 - DRD3_10.mol2
 - DRD3_10.tsv
 
-It produces two differents outputs per selected reactions.
+It produces two different outputs for each selected reaction.
+
 Avalaible reactions (-r) : 
 - all : All possible reactions
 - 1 : Amide
@@ -51,4 +53,4 @@ Didier Rognan, PhD: rognan'[at]'unistra.fr
 
 ## References
 - Hartenfeller M, et al. A collection of robust organic synthesis reactions for in silico molecule design. J Chem Inf Model 51, 3093-3098 (2011).
-- 
+
