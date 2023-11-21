@@ -40,8 +40,8 @@ Outputs :
 - DRD3_10.tsv
 
 It produces two different outputs for each selected reaction :
-- mol2 file: Multiple combinations of two building blocks, referred to as a "SpaceDock pose"
-- tsv file : A tab-separated file containing the docking pose name for each combination.
+- mol2 file : Multiple combinations of two building blocks,, referred to "SpaceDock poses"
+- tsv file : A tab-separated file containing the file names of the two building block poses for each combination.
 
 Avalaible reactions (-r) : 
 - all : All possible reactions
