@@ -42,7 +42,7 @@ This command will initiate SpaceDock using the path containing building block po
 It produces two different outputs for each selected reaction :
 - mol2 file : Multiple combinations of two building blocks,, referred to "SpaceDock poses"
 - tsv file : A tab-separated file containing the file names of the two building block poses for each combination.
-- 
+
 #### Avalaible reactions (-r) : 
 - all : All possible reactions
 - 1 : Amide
@@ -57,8 +57,6 @@ $ python3.9 SpaceDock_launcher.py -pbb docked_BBs/ -o DRD3 -r "1 10" --ichem ICh
 ```
 This command allows the filtering of combinations based on IChem interactions fingerprint similarity. 
 A reference ligand is required, and the ichem.conf file (examples provided in the IChem/ folder) must be filled out.
-
-
 
 ## Contacts
 François Sindt: f.sindt'[at]'unistra.fr  
