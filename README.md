@@ -12,7 +12,7 @@ SpaceDock is a straightforward and rapid computational approach designed to scre
 ## Requirements
 1. /!\ Python 3.9+
 2. A Linux operating system
-3. Enamine building blocks docking poses docked with GOLD*
+3. Enamine building blocks poses docked with GOLD*
 *https://www.ccdc.cam.ac.uk/solutions/software/gold/
 
 ## Installation
