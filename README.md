@@ -33,7 +33,7 @@ $ python3.9 SpaceDock_launcher.py -pbb docked_BBs/ -o DRD3 -r "1 10"
 ```
 This command will initiate SpaceDock using the path containing building block poses (-pbb docked_BBs/) and using reactions 1 and 10 (-r "1 10").
 
-Outputs :
+#### Outputs :
 - DRD3_1.mol2
 - DRD3_1.tsv
 - DRD3_10.mol2
@@ -42,14 +42,22 @@ Outputs :
 It produces two different outputs for each selected reaction :
 - mol2 file : Multiple combinations of two building blocks,, referred to "SpaceDock poses"
 - tsv file : A tab-separated file containing the file names of the two building block poses for each combination.
-
-Avalaible reactions (-r) : 
+- 
+#### Avalaible reactions (-r) : 
 - all : All possible reactions
 - 1 : Amide
 - 10 : Sulfonamide
 - 27 : Benzoxazole
 
 For more option, use the SpaceDock_launcher.py --help command
+
+#### Optional IChem IFP similarity filtering
+``` bash
+$ python3.9 SpaceDock_launcher.py -pbb docked_BBs/ -o DRD3 -r "1 10" --ichem IChem/ichem_DRD3.conf
+```
+This command allows to filtered out combinations by interactions fingerprint similarity if a reference ligand in the structure is available and you own the IChem software.
+
+
 
 ## Contacts
 François Sindt: f.sindt'[at]'unistra.fr  
