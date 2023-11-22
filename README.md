@@ -2,9 +2,8 @@
 
 [![Generic badge](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://shields.io/)  
 
-<p align="center">
-<img src="https://github.com/litfsindt/spacedock/blob/dc7f6994b584a5a7657549023677f6bcebe78eaf/docs/images/SpaceDock_illus.png" width="600" />
-</p>
+<p align="center"><img src="https://github.com/litfsindt/spacedock/blob/dc7f6994b584a5a7657549023677f6bcebe78eaf/docs/images/SpaceDock_illus.png" width="600" /></p>
+
 
 ## Introduction
 SpaceDock is a straightforward and rapid computational approach designed to screen virtually 'ultra-large' synthetically accessible chemical libraries. It first requires docking commercially available chemical reagents into the target of interest, assembling them in the target's cavity based on standard organic chemistry reactions, thereby proposing multibillion compound libraries achievable in one or two synthetic steps.
