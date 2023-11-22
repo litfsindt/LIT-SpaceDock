@@ -129,7 +129,7 @@ if __name__ == "__main__":
             help='GOLD docking pose path stored in tsv file : name_BB \\t path_BBs_pose')
 	parser.add_argument('-pbb', '--pathbbposes', type=str, required=False,
             help='GOLD docking pose folder')
-	parser.add_argument('-t', '--tag', type=str, required=False, default="datas/tag_table_REAL.tsv",
+	parser.add_argument('-t', '--tag', type=str, required=False, default="data/tag_table_REAL.tsv",
             help='Building block tag table. Default datas/tag_table_REAL.tsv')
 	parser.add_argument('-o','--output', type=str, required=True,
             help='Output name .mol2 and .tsv')

@@ -33,9 +33,6 @@ $ python3.9 SpaceDock_launcher.py -pbb docked_BBs_DRD3/ -o DRD3 -r 1 10
 ```
 This command will initiate SpaceDock using the path containing building block poses (-pbb docked_BBs/) and using reactions 1 and 10 (-r 1 10).
 
-## Examples
-Certain building blocks have been already docked with GOLD in the Dopamine D3 Receptor (located in the docked_BBs_DRD3/ folder) and in the Estrogen Beta Receptor (docked_BBs_ERB/). These are ready for use in SpaceDock example combinations (with -pbb option).
-
 #### Outputs :
 - DRD3_1.mol2
 - DRD3_1.tsv
@@ -60,6 +57,9 @@ $ python3.9 SpaceDock_launcher.py -pbb docked_BBs_DRD3/ -o DRD3 -r 1 10 --ichem 
 ```
 This command allows the filtering of combinations based on IChem interactions fingerprint similarity. 
 A reference ligand is required, and the ichem.conf file (examples provided in the IChem/ folder) must be filled out.
+
+## Examples
+Certain building blocks have been already docked with GOLD in the Dopamine D3 Receptor (located in the docked_BBs_DRD3/ folder) and in the Estrogen Beta Receptor (docked_BBs_ERB/). These are ready for use in SpaceDock example combinations (with -pbb option).
 
 ## Contacts
 François Sindt: f.sindt'[at]'unistra.fr  
