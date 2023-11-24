@@ -51,7 +51,8 @@ class Loader:
 			for line in line_tag_table:
 				if line != "":
 					try:
-						id_rct, name, tag_ids, reaction, chemotype = line.split("\t")
+						### The order of this change in the new version of Tag Table ! If update, it has to be change !! ###
+						name, reaction, chemotype, tag_ids = line.split("\t")
 
 						for selected_reaction in selected_reactions_:
 							if selected_reaction.find(reaction) != -1:
