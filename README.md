@@ -2,7 +2,7 @@
 
 [![Generic badge](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://shields.io/)  
 
-<p align="center"><img src="https://github.com/litfsindt/spacedock/blob/dc7f6994b584a5a7657549023677f6bcebe78eaf/docs/images/SpaceDock_illus.png" width="600" /></p>
+<p align="center"><img src="https://github.com/litfsindt/LIT-SpaceDock/blob/master/img/SpaceDock_illus.png" width="600" /></p>
 
 
 ## Introduction
