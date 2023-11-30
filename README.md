@@ -56,9 +56,13 @@ $ python3.9 SpaceDock_launcher.py -pbb docked_BBs_DRD3/ -o DRD3 -r 1 10 --ichem 
 ```
 This command allows the filtering of combinations based on IChem interactions fingerprint similarity. 
 A reference ligand is required, and the ichem.conf file (examples provided in the IChem/ folder) must be filled out.
+An IChem license is available in the IChem/ folder.
 
 ## Examples
 Certain building blocks have been already docked with GOLD in the Dopamine D3 Receptor (located in the docked_BBs_DRD3/ folder) and in the Estrogen Beta Receptor (docked_BBs_ERB/). These are ready for use in SpaceDock example combinations (with -pbb option).
+
+#### Structures
+Dopamine D3 Receptor (PDB : 3PBL) and Estrogen Beta Receptor (PDB : 1QKM) structures used for this work are available in structures/
 
 ## Contacts
 François Sindt: f.sindt'[at]'unistra.fr  

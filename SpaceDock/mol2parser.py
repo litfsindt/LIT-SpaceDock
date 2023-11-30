@@ -1,5 +1,3 @@
-
-
 class Mol2:
 
 
