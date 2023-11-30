@@ -58,18 +58,18 @@ This command allows the *on the fly* filtering of combinations based on IChem* i
 A reference ligand is required, and the ichem.conf file (examples provided in the IChem/ folder) must be filled out.
 *Download : http://bioinfo-pharma.u-strasbg.fr/labwebsite/downloads/IChem_v5.2.9.tar.gz. A license key is available in the IChem/ folder.
 
-#### Energy-minimization with SZYBKI
+## Energy-minimization with SZYBKI
 Once the "SpaceDock poses" are generated, they can be subject to a brief energy minimization using SZYBKI* under protein constraints to relax the newly formed bond.
-*https://www.eyesopen.com/szybki
 ``` bash
-$ /szybki -protein DRD3_3PBL_protein.mol2 -in DRD3_1.mol2 -out DRD3_1_minimized.mol2 -prefix DRD3_1_minimized -ff mmff94 -optGeometry cart -exact_vdw -heavy_rms
+$ szybki -protein DRD3_3PBL_protein.mol2 -in DRD3_1.mol2 -out DRD3_1_minimized.mol2 -prefix DRD3_1_minimized -ff mmff94 -optGeometry cart -exact_vdw -heavy_rms
 ```
+*https://www.eyesopen.com/szybki
 
 ## Examples
 Certain building blocks have been already docked with GOLD in the Dopamine D3 Receptor (located in the docked_BBs_DRD3/ folder) and in the Estrogen Beta Receptor (docked_BBs_ERB/). These are ready for use in SpaceDock example combinations (with -pbb option).
 
 #### Structures
-Dopamine D3 Receptor (PDB : 3PBL) and Estrogen Beta Receptor (PDB : 1QKM) structures used for this work are available in structures/
+Dopamine D3 Receptor (PDB : 3PBL) and Estrogen Beta Receptor (PDB : 1QKM) structures used for this work are available in structures/ folder.
 
 ## Contacts
 François Sindt: f.sindt'[at]'unistra.fr  
@@ -78,5 +78,5 @@ Didier Rognan, PhD: rognan'[at]'unistra.fr
 ## References
 - Hartenfeller M, et al. A collection of robust organic synthesis reactions for in silico molecule design. J Chem Inf Model 51, 3093-3098 (2011).
 - Da Silva F, Desaphy J, Rognan D. IChem: A Versatile Toolkit for Detecting, Comparing, and Predicting Protein-Ligand Interactions. ChemMedChem 13, 507-510 (2018).
-- OpenEye, Cadence Molecular Sciences, Santa Fe, NM, U.S.A., www.eyesopen.com
+- SZBYKI v2.4.0.0: OpenEye, Cadence Molecular Sciences, Santa Fe, NM, U.S.A., www.eyesopen.com
 
