@@ -61,6 +61,9 @@ A reference ligand is required, and the ichem.conf file (examples provided in th
 #### Energy-minimization with SZYBKI
 Once the "SpaceDock poses" are generated, they can be subject to a brief energy minimization using SZYBKI* under protein constraints to relax the newly formed bond.
 *https://www.eyesopen.com/szybki
+``` bash
+$ /szybki -protein DRD3_3PBL_protein.mol2 -in DRD3_1.mol2 -out DRD3_1_minimized.mol2 -prefix DRD3_1_minimized -ff mmff94 -optGeometry cart -exact_vdw -heavy_rms
+```
 
 ## Examples
 Certain building blocks have been already docked with GOLD in the Dopamine D3 Receptor (located in the docked_BBs_DRD3/ folder) and in the Estrogen Beta Receptor (docked_BBs_ERB/). These are ready for use in SpaceDock example combinations (with -pbb option).
