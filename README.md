@@ -73,6 +73,7 @@ Dopamine D3 Receptor (PDB : 3PBL) and Estrogen Beta Receptor (PDB : 1QKM) struct
 
 ## Contacts
 François Sindt: f.sindt'[at]'unistra.fr
+
 Didier Rognan, PhD: rognan'[at]'unistra.fr
 
 ## References
