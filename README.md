@@ -42,7 +42,7 @@ It produces two different outputs for each selected reaction :
 - mol2 file : Multiple combinations of two building blocks,, referred to "SpaceDock poses"
 - tsv file : A tab-separated file containing the file names of the two building block poses for each combination.
 
-#### Avalaible reactions (-r) : 
+#### Avalaible reactions (-r) : Version 1.0.0
 - all : All possible reactions
 - 1 : Amide
 - 10 : Sulfonamide
@@ -56,7 +56,7 @@ $ python3.9 SpaceDock_launcher.py -pbb docked_BBs_DRD3/ -o DRD3 -r 1 10 --ichem 
 ```
 This command allows the *on the fly* filtering of combinations based on IChem* interactions fingerprint similarity. 
 A reference ligand is required, and the ichem.conf file (examples provided in the IChem/ folder) must be filled out.
-*Download : http://bioinfo-pharma.u-strasbg.fr/labwebsite/downloads/IChem_v5.2.9.tar.gz. A license key is available in the IChem/ folder.
+*Executable and a license key is available in the IChem/ folder.
 
 ## Energy-minimization with SZYBKI
 Once the "SpaceDock poses" are generated, they can be subject to a brief energy minimization using SZYBKI* under protein constraints to relax the newly formed bond.
@@ -72,7 +72,7 @@ Certain building blocks have been already docked with GOLD in the Dopamine D3 Re
 Dopamine D3 Receptor (PDB : 3PBL) and Estrogen Beta Receptor (PDB : 1QKM) structures used for this work are available in structures/ folder.
 
 ## Contacts
-François Sindt: f.sindt'[at]'unistra.fr  
+François Sindt: f.sindt'[at]'unistra.fr 
 Didier Rognan, PhD: rognan'[at]'unistra.fr
 
 ## References
