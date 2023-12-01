@@ -72,7 +72,7 @@ Certain building blocks have been already docked with GOLD in the Dopamine D3 Re
 Dopamine D3 Receptor (PDB : 3PBL) and Estrogen Beta Receptor (PDB : 1QKM) structures used for this work are available in structures/ folder.
 
 ## Contacts
-François Sindt: f.sindt'[at]'unistra.fr 
+François Sindt: f.sindt'[at]'unistra.fr
 Didier Rognan, PhD: rognan'[at]'unistra.fr
 
 ## References
