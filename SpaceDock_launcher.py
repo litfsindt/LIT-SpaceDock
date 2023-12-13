@@ -151,8 +151,8 @@ if __name__ == "__main__":
 
 	if args.ichem != None:
 		ichem_path = None
-		thresold_FULL = None
-		thresold_POLAR = None
+		threshold_FULL = None
+		threshold_POLAR = None
 		ligand = None
 		protein = None
 		with open(args.ichem, 'r') as file_ichem_conf_hdl:
@@ -162,15 +162,15 @@ if __name__ == "__main__":
 					if line.strip()[0] != "#":
 						if line.find("ICHEM_PATH") != -1:
 							ichem_path = line.split()[1]
-						if line.find("THRESOLD_FULL")  != -1:
-							thresold_FULL = float(line.split()[1])
-						if line.find("THRESOLD_POLAR")  != -1:
-							thresold_POLAR = float(line.split()[1])
+						if line.find("THRESHOLD_FULL")  != -1:
+							threshold_FULL = float(line.split()[1])
+						if line.find("THRESHOLD_POLAR")  != -1:
+							threshold_POLAR = float(line.split()[1])
 						if line.find("LIGAND")  != -1:
 							ligand = line.split()[1]
 						if line.find("PROTEIN")  != -1:
 							protein = line.split()[1]
-		ichem_conf = (ichem_path, thresold_FULL, thresold_POLAR, ligand, protein)
+		ichem_conf = (ichem_path, threshold_FULL, threshold_POLAR, ligand, protein)
 		for parameter in ichem_conf:
 			if parameter == None:
 				print("Missing parameters in ichem conf file")
@@ -179,7 +179,7 @@ if __name__ == "__main__":
 
 		print("IChem Parameters : ")
 		print("PATH", ichem_path)
-		print("Thresold", "FULL :", thresold_FULL, "POLAR :", thresold_POLAR)
+		print("Threshold", "FULL :", threshold_FULL, "POLAR :", threshold_POLAR)
 		print("Rerefence ligand", ligand)
 		print("Protein", protein)
 		print("\n")
