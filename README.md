@@ -8,6 +8,9 @@
 ## Introduction
 SpaceDock is a straightforward and rapid computational approach designed to screen virtually 'ultra-large' synthetically accessible chemical libraries. It first requires docking commercially available chemical reagents into the target of interest, assembling them in the target's cavity based on standard organic chemistry reactions, thereby proposing multibillion compound libraries achievable in one or two synthetic steps.
 
+Further details on the methodology and case study applications can be found at : https://doi.org/10.1021/acscentsci.3c01521
+
+
 ## Requirements
 1. /!\ Python 3.9+
 2. A Linux operating system
@@ -32,7 +35,7 @@ $ python3.9 SpaceDock_launcher.py -pbb docked_BBs_DRD3/ -o DRD3 -r 1 10
 ```
 This command will initiate SpaceDock using the path containing building block poses (-pbb docked_BBs/) and using reactions 1 and 10 (-r 1 10).
 
-#### Outputs :
+#### Example outputs :
 - DRD3_1.mol2
 - DRD3_1.tsv
 - DRD3_10.mol2
@@ -77,6 +80,7 @@ François Sindt: f.sindt'[at]'unistra.fr
 Didier Rognan, PhD: rognan'[at]'unistra.fr
 
 ## References
+- Sindt F, et al. Protein Structure-Based Organic Chemistry-Driven Ligand Design from Ultralarge Chemical Spaces. ACS Cent. Sci 10, 3, 615–627 (2024)
 - Hartenfeller M, et al. A collection of robust organic synthesis reactions for in silico molecule design. J Chem Inf Model 51, 3093-3098 (2011).
 - Da Silva F, Desaphy J, Rognan D. IChem: A Versatile Toolkit for Detecting, Comparing, and Predicting Protein-Ligand Interactions. ChemMedChem 13, 507-510 (2018).
 - SZBYKI v2.4.0.0: OpenEye, Cadence Molecular Sciences, Santa Fe, NM, U.S.A., www.eyesopen.com
